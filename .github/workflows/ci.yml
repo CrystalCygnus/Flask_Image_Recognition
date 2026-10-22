@@ -29,5 +29,5 @@ jobs:
 
       - name: Run tests + linter
         run: |
-          pylint *
           pytest
+          pylint *
