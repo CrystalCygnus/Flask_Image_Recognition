@@ -16,7 +16,6 @@ app = Flask(__name__)
 def main():
     return render_template("index.html")
 
-
 # Prediction route
 @app.route('/prediction', methods=['POST'])
 def predict_image_file():
@@ -26,7 +25,7 @@ def predict_image_file():
             pred = predict_result(img)
             return render_template("result.html", predictions=str(pred))
 
-    except TypeError:
+    except Exception:
         error = "File cannot be processed."
         return render_template("result.html", err=error)
 
