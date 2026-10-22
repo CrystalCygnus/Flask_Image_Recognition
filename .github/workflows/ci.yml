@@ -30,4 +30,4 @@ jobs:
       - name: Run tests + linter
         run: |
           pytest
-          # pylint *
+          pylint app.py model.py
