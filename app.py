@@ -25,7 +25,10 @@ def predict_image_file():
         error = "File cannot be processed."
         return render_template("result.html", err=error)
 
+    return 0
+
 
 # Driver code
 if __name__ == "__main__":
     app.run(port=9000, debug=True)
+    
