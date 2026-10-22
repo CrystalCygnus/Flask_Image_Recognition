@@ -1,3 +1,8 @@
+"""
+Handle running the main app, with logic for rendering templates, as well as accepting
+file uploads that use POST
+"""
+
 # Importing required libs
 from flask import Flask, render_template, request
 from model import preprocess_img, predict_result

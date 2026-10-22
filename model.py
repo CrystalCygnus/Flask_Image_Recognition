@@ -1,3 +1,7 @@
+"""
+Interact with the model, as well as preprocess the image before the model predicts
+"""
+
 # Importing required libs
 from keras.models import load_model
 from keras.utils import img_to_array
