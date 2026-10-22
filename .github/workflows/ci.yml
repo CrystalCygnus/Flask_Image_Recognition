@@ -10,11 +10,11 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest  # Specify the OS to run the job
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2  # Checks out your repository's code
+        uses: actions/checkout@v2
 
       - name: Set up Python
         uses: actions/setup-python@v2
@@ -26,3 +26,7 @@ jobs:
           python -m pip install --upgrade pip setuptools wheel
           python -m pip install -r requirements.txt
 
+
+      - name: Run tests
+        run: |
+          pytest test_model.py
